@@ -3,7 +3,7 @@ Learning Objective: Understand The Linux File System, Command Line Interface, Pr
 
 What Is Linux?
 
-Linux is and Open Source Operating System (THIS MEANS THAT IT IS LIKE A COMPUTER SOFTWARE THATS OPEN TO EVERYONE TO SEE, USE AND MODIFY.) 
+Linux is an Open Source Operating System (THIS MEANS THAT IT IS LIKE A COMPUTER SOFTWARE THATS OPEN TO EVERYONE TO SEE, USE AND MODIFY.) 
 Important Note For Explanation In Interviews If Asked: Linux is a popular and efficient operating system because it is known for its security, flexibility and strong community support, it is cost effective and highly secure making it the go to operating system used in Tech Companies:)
 Linux is the backnone of many Servers Networks and Cloud Infrascructures 
 Versions of Linux is known as Distributions or 'Flavours'
