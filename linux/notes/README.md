@@ -83,8 +83,95 @@ when using the 'mkdir -v' Option, it makes the mkdir command show you a message 
 Its like the command is talking back to you, letting you know exactly what its doing as it creates directories 
                                                   E.g
 If you use the command 'mkdir -v my folder' the command will create a folder named "my folder" and then show a message like "mkdir created directory "my folder" to confirm that the folder was created.                                                  
-                                                                                                   
-                                                                                                   
-                                                                                                   
-                                                                                                   
-                                                                                                 
+
+
+
+
+
+INTERESTING COMMANDS!!!
+
+What Are Head And Tail Commands?
+
+Head and Tail commands are useful for viewing the beggining and end of files.
+
+Lets say for example you have a massive file, and you dont want to use the cat command to list the contents within the file because its just too long!
+
+Head and Tail command are helpful when you are dealing with particulary large files and only want to view the beggining and end of the files!!
+
+What is the head command?
+
+The head command allows us to view the first '10 lines' of a file.
+
+So lets say for an example, you have a file that has 20 lines, but you only want to view the first few lines of the file...The 'head' command will display the first 10 lines of the file!!
+
+Now lets say that you want to specify a number of files that you want to view... you would need to add an arguement/option to do this 
+
+VERY IMPORTANT EXAMPLE!!
+
+So if you want to soecify the number of lines you want to see in the file, you run the command:
+
+"head -n (whatever number you want) 'filename.txt'"
+
+The "-n" allows you to choose the number of lines in the files that you want to access.
+
+Lets say that you had a file called 'multiline.txt' and within this file you have 20 lines bhut you want to view the first 4 lines of the file, You would run the command:
+
+"head -n '4' multiline.txt"
+                                                                   The terminal should then list the first 4 lines of this file!!!
+                                                                   Now, In Contrary...
+                                                                   The Tail command allows you to view the last 10 lines of a file!!
+                                                                   So lets demonstrate another example...
+                                                                   if you had a file called multiline.txt that had 20 lines and you wanted to view the last ten... You would run the command...
+                                                                   'tail multiline.txt'
+                                                                   This will display the last 10 lines in the file to be precise!!
+                                                                   Now lets go through another example!!
+                                                                   Lets say that you wangt to view the last 7 lines of a file...
+                                                                   What command do you run??
+                                                                   'tail -n 7 multiline.txt'
+                                                                   This will display the last 7 lines of the the file!!
+                                                                   Remember the '-n' option lets you choose which number you want to select the number you want!!!
+                                                                   Did you know that you can use the 'Head' and 'Tail' commands together to view specific scetions of a file??
+                                                                   Lets say you wanted to view lines '6 to 10' of a file, the 'Head' command will not directly give you these specifications because it only lists the first 10, which means that you would need to run the tail command along side it to display the correct answer...
+                                                                   Lets take a look at this further!!!
+                                                                   The first thing you would need to do is to list the first 10 lines of the command, like this...
+                                                                   'head -n 10'
+                                                                   REMEMBER!! The '-n 10' option in this scenario is not necessary since the 'head' command already does this, however we need to specify it to complete the next part of the command!!
+                                                                   Then we use what is known as the '|' "pipe symbol" and then you add the file name after it (in this case multiline.txt) following with completing the command with 'tail -n 5'
+                                                                   So the whole command should look something like this:
+        
+
+             head -n 10 multiline.txt | tail -n 5
+                                                                                             
+A Summary of what we are telling our linux file system!!
+
+Weare telling our linux file system that we want to find the first ten lines of our file,'multiline.txt' and once we've done that, we want to print the last 5 lines of those ten lines which is initially 6-10!!!
+
+what is this character '|' (pipe symbol) doing in this command???
+
+the '|' pipe is passing the contents of the first command as an arguement to the second command!!
+
+SUMMARY!!
+The 'Head' AND 'Tail' commands are powerful tools for quicly viewing the begining and ending of files, by specifying the number of libes to display, you can easily inspect different parts of a file without needing to open the entire file!!!
+                                                                  QUICK NOTE:
+
+The 'Vim' command is a text editor command that allows you to edit files, similar to the 'nano' command
+
+All about File Management commands!!!
+
+what are file management commands?
+
+3 essential file managemnt commands
+
+'cp' 'mv' 'rm'
+
+the 'cp' command allows you to copy files and directories
+
+Lets say if you want to copy a file you made! we previously made a file called 'multiline.txt' so we will use this for our example! 
+
+if you want to copy the 'multiline.txt' file into another file such as 'multiline_copy.txt' for example 
+
+you run the command:
+
+'cp multiline.txt multiline_copy.txt'
+
+This command coppied 'multiline.txt' into the 'multiline_copy.txt'file
