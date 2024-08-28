@@ -174,4 +174,68 @@ you run the command:
 
 'cp multiline.txt multiline_copy.txt'
 
-This command coppied 'multiline.txt' into the 'multiline_copy.txt'file
+This command coppied 'multiline.txt' into the 'multiline_copy.txt'file!!
+
+you can also use the 'cp' command to copy a directory as well as a file, but you have to use the '-r' option as an arguement!! so it will look something like this "cp -r"
+
+This is because the 'cp' command by default does not copy directories so we have to use the '-r' arguement
+
+The '-r' option stands for recursive
+
+Lets show an example!!
+
+if you had a directory called 'my work_ubuntu' for example and you wanted to copy it, you would run the command:
+
+'cp-r my work_ubuntu my work_ubuntu_copy'
+
+ Lets break it down!!
+
+ you are copying your already current directory that you have made which is why you have to as the '_copy' addition becayse then it officially becomes a copy of the current directory.
+
+ rm and mv Commands in More detail!!
+
+the 'mv' command isn used to move or Rename files 
+
+Lets demonstrate how the the 'mv' command Renames files!!
+Lets say that we wanted to Rename one one of our files, in this case we can use the example 'multiline_copy.txt'
+
+Remember that this is the file that we copied with the 'cp -r' command.
+
+using the 'mv' command we can rename 'multiline_copy.txt
+
+It should look something like this:
+
+' mv multiline_copy multiline_backup.txt '
+if you want to move a file to a different directory, you can use the 'mv' command like this 
+'mv 'examplefile.txt' 'example_directory'
+
+what about the 'rm' command?
+
+The 'rm' command is used to move both files and directories!!
+
+lets say you wanted to remove a file within a directory.
+
+so we have 'examplefile.txt' within the directory 'examplefirectory' to remove this file from this directory we would run the command 
+
+'rm examplefile.txt'
+
+REMEMBER!! YOU NEED TO NAVIGATE TO THE DIRECTORY 'exampledirectory' dor un the command above first.
+
+Then if you run the command 'ls' the 'examplefile.txr' should be removed from the 'exampledirectory'
+
+now if we want to use the 'rm' to remove a directory 
+
+you have to use the '-r' option
+
+so lets say you want to remove the directory 'exampledirectory'
+
+you would have to run the command:
+
+' rm -r exampledirectory '
+
+Then when you enter the 'ls' command the the directory should not come up on the list 
+
+
+
+
+
