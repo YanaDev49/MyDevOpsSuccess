@@ -274,6 +274,7 @@ to save changed, you need to be in command mode and type ':wq!'
   - if you do not want to save changed in the command mode you type ':q!'
 
     VIM Navigation!!! (very important!!)
+    
 - to move to the beggining of the line in vim editor press '0'
 - and to move to the end pf line press '*' or shift + 4
 - moving forward press 'w'
@@ -292,9 +293,47 @@ to save changed, you need to be in command mode and type ':wq!'
 - ':w' is just to save work in vim, it will not exit out the file
 - ':wq!' forces vim to save and exit file 
 
-    
+    The 'sudo' command!!
 
-    
+  - the 'sudo' command stands for 'super user do'
+  - this command allows a permitted user to execute a command as the root user
+  - you have to be a permitted user to use the 'sudo' command
+  - example of sudo command 'sudo apt-get install'
+  - some commands can only be run by the root user or a user that has elevated permissions, these include commands that allow you to install a package or update 
+  - an example of a command where you will need a root user or elevated permissions is the 'apt-get' command
+  - if you run this command without 'sudo' your access will be denied
+  - to run the previous command, you can add '!!'
+  - editing configurtion files also need a user permission or a root user
+- to edit configuration files, you need to enter the 'sudo' command to be granted access to edit them for example 'sudo vim /etc/nginx
+
+
+  The Root User and Dangerous commands!!!
+- you might need to navigate to the route user to perform administerative tasks
+- to enter your route user, run the command 'sudo su'
+- you might want to use this if you are using multiple commands that require super user permissions
+- the 'whoami' command can verify what user you are using
+- there are dangerous commands you can runas a routr user
+- As a root user you have unrestricted access to the whole system
+- to return to normal user type 'exit'
+- EXTREMELY DANGEROUS COMMAND: 'rm -rf /'
+- This command is telling the system t remove everything on it which means you will loose all files and directories
+- all sudo commands are logged for security purposes
+- you can view the sudo log entaries in a file called '/var/logauth.log
+- if you run the command 'sudo tail /var/logauth.log' it will show you the last ten lines of the file and show all thetimes youve used the 'sudo command' 
+
+  Users in Linux!!
+- This section  will teach you how to create a user, switch users, add and remove users from the sudo's list, and verify sudo access
+- command to create a new user: 'sudo useradd newuser'
+-  command for creating password for new user: 'sudo passwd newuser'
+- command for switching user: 'su - newuser'
+- run the 'whoami' to display the username associated with the current user who is logged
+-   to add your new user to the priviledges list or 'sudo's' list to be able to run commands that require higher acces in the user: run the command: 'sudo usermod -aG sudo newuser'
+-   Command that allows you to read the contents of the root directory: 'sudo ls /root'
+- without 'sudo' the command above cannot work
+-  to remove your user from the priviledges list, run the command: 'sudo deluser newuser sudo'
+-  
+-   
+  
 
 
 
