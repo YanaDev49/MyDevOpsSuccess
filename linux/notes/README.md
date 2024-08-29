@@ -273,6 +273,29 @@ to save changed, you need to be in command mode and type ':wq!'
   - to navigate between modes you need to press the 'Esc'
   - if you do not want to save changed in the command mode you type ':q!'
 
+    VIM Navigation!!! (very important!!)
+- to move to the beggining of the line in vim editor press '0'
+- and to move to the end pf line press '*' or shift + 4
+- moving forward press 'w'
+- Move backwards by pressing 'b'
+- to go to a specific line type ':' following up with the line number you need
+- to search for a word in the text if its too long, stay in command mode and type'/' following what what you want to search for (occurance)
+- if you want to look for a second occurance (the same word but in a different line, you navigate this pressing 'n' and if you want to go back to the first occurance (first word of the same word that you searched) you press 'N'
+- if you want to delete lines in the vim text editor, you navigate to the line you want to delete and press 'dd'
+- if you want to just delete from the middle of the line to the end, you would navigate from the middle of the line and press 'D'
+- copying is known as 'yank' in vim and to do this you need to navigate to the line you want to copy and press 'y' then to paste the copies text, you press 'p'
+- to undo changes in vim press 'u'
+- to redo undone change you press 'ctrl + R'
+- Vim enables syntax highlighting which makes it easier to read configuration files
+- to enable syntax hyghlighting with vim type ':syntax'
+- to view the numbers of of files type ':set number' In command mode and to remove number 'set nonumber'
+- ':w' is just to save work in vim, it will not exit out the file
+- ':wq!' forces vim to save and exit file 
+
+    
+
+    
+
 
 
     
