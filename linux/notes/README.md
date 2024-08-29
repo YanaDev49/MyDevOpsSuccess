@@ -236,6 +236,49 @@ you would have to run the command:
 Then when you enter the 'ls' command the the directory should not come up on the list 
 
 
+mkdir command notes aaddition:
 
+- you can make nested directories with the mkdir command
+- nested directories are like folders within folders (for context)
+- you cannot create nested directories with the 'mkdir' command alone
+- use 'mkdir -p' to make nested directories (folders within folders)
+- use the 'ls -R' command to view nested directories
+- the '-R' option lists directories recursively meaning to list contents withhin directories that are also withi other directories
+- 'rmdir' can only remove empty directories
+- 'rm -r' removes contents from directories as well as directories themselves
+
+  Dealing with tricky spaces in folder names!!!:
+
+- spaces in folder names can cause issues due to the system recognising the 2 segregated words as different directories
+- to create a project with spaces in it... use speech marks e.g 'mkdir "My Project"'
+- This will make a directory called 'My Project'
+- another approach: use the '/' character E.g 'mkdir My\ Project\ 2'
+- this will make a directory called 'My Project 2'
+- How to navigate to directories with spaced in them? use the 'cd' command followed by speech marks and having the directory name inside them e.g 'cd "My Project"
+
+Vim Text Editor!!!
+-Vim is widely used because ofits efficiency and extensive feature set
+- the 'vim' command will create afile for you if it doesnt already exist like the 'echo' command
+- to edit a file, run: 'vim examplefile.txt'
+- The 3 most important modes of the 'vim' command:
+- 1. command mode: allows you to move around in file and perform
+     various operations like deleting text
+     
+how to navigate command mode: use 'h' to move left accross text, 'j' to move down, 'k' to move up, 'l' to move right
+
+to save changed, you need to be in command mode and type ':wq!'
+     
+  3. insert mode: where you can insert and edit text
+  4. Visual mode: you can use to select text in a visual format
+  - to navigate between modes you need to press the 'Esc'
+  - if you do not want to save changed in the command mode you type ':q!'
+
+
+
+    
+
+  
+   
+  
 
 
