@@ -436,7 +436,42 @@ to change groups of a file or directory we use the command 'chgrp' this command 
 
 Managing these streams effectively allows you to control how input and output are handled in your scripts and commands.
 
+Standard Input, Output and Error streams
 
+- The cat command is an example of a standard input stream because if there is no file specified with the cat command, it will just print out whatever you have written. 
+
+  E.g '~ cat
+       what you inputed: This is something
+       what cat prints: This is something'
+
+  However, when you redirect text with the 'echo' command, the cat will output whatever the 'echo' command has sent through
+
+  Another way we can use the cat command is by using the '>' charater which feeds the content to the cat command but it will display the same output as the cat command without the '>' character.
+
+  standard output is the stream where a program writes its output data, the 'echo' command is an example of the output stream because it prints out the text from a file that has been inputed
+
+  E.g 'echo "this is a test file" will print out "this is a test file"
+
+   when you use the '>' redirecting operator it redirects the terminal output to a file
+
+  E.g 'echo "This is a test file" > output.txt
+
+  this means that the output will not be shown on the terminal screen
+  '>' also overwrites the contents of a file
+
+  Standard error, Standard error is the stream where a program writes its error messages
+
+ if you enter a command and the command execution fails, an error message will print out which is what the error stream is 
+
+- you can re-direct an error to a file
+- if you want to re-direct error to a file you use '2>'
+
+- e.g ls nonexistant 2> error.txt
+- (the 'nonexistant' is just an example of a file that showed an error)
+
+- how to redirect standard 'out' and standard 'error' to the same file:
+   use the the '&>' 
+  
       
     
     
