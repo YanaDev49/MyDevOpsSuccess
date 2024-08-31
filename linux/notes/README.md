@@ -400,6 +400,54 @@ chmod Command: Symbolic and Numeric representations!!
 
 - if you want to specify permissions to both 'user, groups' you can add the '=' character sign to specify both at the same time E.g 'chmod ug=rw o=r 'examplefile.txt'
 
+  Changing file/Dir ownership for User/group!
+
+  - To change the owner of a file or directory we use the command 'chown', but we have to use the 'sudo' command before using 'chown' because this command is used for users who have permission or access only!
+
+     Using the 'Chown' (change owner) command may look something like: 'sudo chown 'new user' 'name of file you want to change it to'
+
+to change groups of a file or directory we use the command 'chgrp' this command also needs 'sudo' infront of it before it can run.
+
+  Using the 'chgrp' (change group) command may look like this: 'sudo chgrp 'new group' 'name of file you want to to make the change of group to.
+
+- you can change both the owner and group of a file AT THE SAME TIME using the 'chown' command which is tim efficient and easier
+- ' sudo chown "name of group you want to change to":"name of user you want to change to" "name of file you want this command to effect"
+
+  E.g 'sudo chown ubuntu:admin2 example.txt'
+
+  - to change the ownership of a direcory you have to run the 'chown' command followed by the '-R' option (recursive)
+
+    Example command: 'sudo chown -R "name of user and group you want to change to" 'name of directory you are directing changes to'
+
+    E.g 'sudo chown -R newuser:admin2 myworkingdirectory'
+
+
+    Introduction to standard streams: Data redirection section
+    
+- in linux, understanding standard streams is crucial for handling input and output effectively
+- THERE ARE 3 STANDARDS STREAMS
+
+1. Standard Input Stream: This is the stream that provides input to commands
+   ( when you type a command in your keyboard and then its past into the running program or linux file system) it could also be redirected from a file for example: when you type in a command and 'press enter' you are using standard input
+
+2. Standard Output: is the stream where commands send their out put onto the screen, for example if you type '$echo SHELL' and the terminal prints 'bash' that is the output of the linux file system followed fromthe command you inputed in.
+
+   3. Standard Error: standard error display's errors on the terminal so that you can actually see when you make an error, for example if a command fails the error message is sent through 'standard error'
+
+Managing these streams effectively allows you to control how input and output are handled in your scripts and commands.
+
+
+      
+    
+    
+
+    
+
+    
+
+- 
+  
+
   
 
 
