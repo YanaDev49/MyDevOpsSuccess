@@ -472,8 +472,40 @@ Standard Input, Output and Error streams
 - how to redirect standard 'out' and standard 'error' to the same file:
    use the the '&>' 
   
-      
-    
+
+
+Enviroment variable:
+
+
+  - In linux, the enviroment variables play a crucial role in defining the enviroment and effect the behaviour of processes on the linux system
+  - enviroment variables, store configuration settings and important system information
+  -  if you was to set an enviroment variable and put it within a script
+  it would contain, important information and effect the behaviour of the system
+
+E.g the 'path enviroment variable' contains all the directories where programs for the commands we run can be found (tells the system where to look for executablefiles)
+
+common examples and settings
+
+- There are 3 Main Enviroment variables in linux:
+- 'PATH, HOME, USER, SHELL'
+
+  Path: This is where the system looks for the directories of the commands we run 'e.g ls'
+
+  Home: this is where the current users directory is
+
+  User: This is the current users username is stored
+
+  Shell: the shell program in use
+
+
+  when temporarily setting enviromental variables, there are 2 ways to do so:
+
+'export' command   
+
+
+
+
+
     
 
     
