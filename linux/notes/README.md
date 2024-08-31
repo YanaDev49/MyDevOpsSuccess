@@ -308,6 +308,7 @@ to save changed, you need to be in command mode and type ':wq!'
 
 
   The Root User and Dangerous commands!!!
+  
 - you might need to navigate to the route user to perform administerative tasks
 - to enter your route user, run the command 'sudo su'
 - you might want to use this if you are using multiple commands that require super user permissions
@@ -332,9 +333,74 @@ to save changed, you need to be in command mode and type ':wq!'
 - without 'sudo' the command above cannot work
 -  to remove your user from the priviledges list, run the command: 'sudo deluser newuser sudo'
 -  
--   
-  
 
+    Groups in linux!!
+- to view all the groups inside your linux system, run the command: cat /etc/group
+-  if you want to create a new group in your linux system, run the command: 'sudo groupadd 'whatever group name'
+-   To add a new user to your new group, you can run the command: 'sudo usermod -aG 'group name' 'username you want'
+-   the 'group' command lists all the groups that the user is in
+-   to remove a user from a group, you run the command: 'sudo gpasswd -d 'username' 'group' name
+-  command for deleting groups: sudo groupdel 'group name'
+-  users can be belong to multiple groups which can be usefull for managing permissions and access
+-  how to add a user to a group: 'sudo usermod -aG 'group you want to add too'
+-  group management is crucial for controlling uder permissions
+  
+  
+  Introduction to file permissions
+  - 'ls -l' is the command we can use to view file permissions
+  - file permissions control who can read, write or execute a file
+  - file permissions may look something like this 'rwx' which stands for 'read, write and execute'
+  - 'write' means you can modify the file or edit it and 'x means you can run the file as a program
+  - permissions are assigned to 3 catergories withtin the linux system... 'user category, 'group catergory' and 'other'
+  - the 'user' is the owner of files and who you are currently logged in as, the 'group' is a group of users with the same permisions and 'others' represent other users...'everyone else'
+- for example if i was to create a file using my ubuntu user and you have specific permissions for the file where everyone else cannot read and write or execute on it (rwx) means that if you was to switch to a newuser and try and edit the file, you would not be able to because the new user does not have the correct permissions to do so
+- maintaining file permissions is vital for maintaining security on your system
+
+
+  Binary, Octal and string Representation!!
+  summarised notes
+- permissions representation can be represesnted in a binary format
+- binary format is when permissions is represented as binary digits
+- Binary is a set of digits, represented by '0' and '1' that have base 2
+- Octal prepresentation: compiled representation using numbers
+- Depending on what permissions has been set also depends on the binary representation, for example, if you have permissions set to 'r-x' this means that you are able to read the file as well as execute the file as a command but cannot modify or edit the file.
+- the binary representation for this permission would be '101' because 2 permissions are on and the other is off 'r-x'
+- another example permission 'rw-' which means the user cannot execute the file as a command but can read and modify/edit the file
+-   with the octal representation, number '7' means that the user has been given all permissions, number '6' means that you have only 2 permisions and number '5' meand that you have 2 permissions but not the middle one so it weights less
+
+- permission settings of a file can look like this: '-rwxrw-rw-' this means for example a files user has the permissions to read, modify and execute file, groups have permissions to read and modify the file only and others can read and write in the file aswell
+
+-   visual example: 'rwx' - 7(4+2+1)
+-                   'rw-' - 6(4+2+0)
+-                   'r-x' - 5(4+0+1)
+
+  chmod calculator allows you to set permissions for the 'owner' 'groups' and 'public' so you can play around with the permissions and see which permissions
+
+chmod Command: Symbolic and Numeric representations!!
+
+- the 'chmod' commands allows us to change the permissions of a file or directory
+- there are to different ways to represent the 'chmod' permissions called 'numeric' and 'symbolic'
+- The symbolic representation is using the 'chmod' command with the 'ugo' which stands for 'user' 'group' and 'category' following with the letters 'rwx' that we dealt with before.
+
+- symbolic file permissions use these letters 'rwx' to represent the permissions for the 'ugo' user, group and others.
+- Heres and example of how you would grant the user execute permissions for a file, grant the group read permissions for a file and takeaway the write permissions from others for the file, using symbolic represenation of 'chmod':
+
+  'chmod u+x,g+r,o-w 'filename.txt'
+
+   - Numeric file permissions use numbers to represent the different permissions, this is the octal representation that we went through before
+   - each permission 'rwx' has a corresponding value e.g 'r=4' 'w=2' 'x=1' this is why, when you want to give full permissions, you would use the value '7' in numeric representation of 'chmod' and limited permissions with others or groups using '5' or '4'
+   - example command 'chmod 750 'filename.txt': this permission settings mean that you are giving the 'user' full permissions, 'groups' only read and execute permissions and 'others' no
+ permissions
+
+  what are scripts?
+  - Scrips are executable files that you can run as a program
+  - so what you do is give a set of commands in a script which you can then use as a program
+  -  to run files that are scrips, all you need to do is type './' followed by the file you want to execute E.g ' ./examplepermissionsscript '
+  - if you want to give execution permissions to a permissions file script, run the command  'chmod +x 'examplepermissionsscript'
+
+- if you want to specify permissions to both 'user, groups' you can add the '=' character sign to specify both at the same time E.g 'chmod ug=rw o=r 'examplefile.txt'
+
+  
 
 
     
