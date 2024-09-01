@@ -281,6 +281,7 @@ to save changed, you need to be in command mode and type ':wq!'
 - Move backwards by pressing 'b'
 - to go to a specific line type ':' following up with the line number you need
 - to search for a word in the text if its too long, stay in command mode and type'/' following what what you want to search for (occurance)
+  
 - if you want to look for a second occurance (the same word but in a different line, you navigate this pressing 'n' and if you want to go back to the first occurance (first word of the same word that you searched) you press 'N'
 - if you want to delete lines in the vim text editor, you navigate to the line you want to delete and press 'dd'
 - if you want to just delete from the middle of the line to the end, you would navigate from the middle of the line and press 'D'
@@ -335,6 +336,7 @@ to save changed, you need to be in command mode and type ':wq!'
 -  
 
     Groups in linux!!
+   
 - to view all the groups inside your linux system, run the command: cat /etc/group
 -  if you want to create a new group in your linux system, run the command: 'sudo groupadd 'whatever group name'
 -   To add a new user to your new group, you can run the command: 'sudo usermod -aG 'group name' 'username you want'
@@ -475,10 +477,11 @@ Standard Input, Output and Error streams
 
 
 Enviroment variable:
-
+- Enviroment variables are dynamic values that effect the way processes behave on the linux system, they are used to store information such as user peferences, user PATHS and configuration settings
 
   - In linux, the enviroment variables play a crucial role in defining the enviroment and effect the behaviour of processes on the linux system
   - enviroment variables, store configuration settings and important system information
+    
   -  if you was to set an enviroment variable and put it within a script
   it would contain, important information and effect the behaviour of the system
 
@@ -500,7 +503,106 @@ common examples and settings
 
   when temporarily setting enviromental variables, there are 2 ways to do so:
 
-'export' command   
+you can set an enviromental variable using the 'export' command... it temporarily sets the enviroment variable for the session you are using
+
+'export Name = Value' if you export the name of your enviroment variable, and make it equal to a value then it exports that enviroment variable back in that session 
+
+so if you wanted to move an enviroment variable to its home you can run a command likr this: 'export JAVA_HOME=/usr/bin/java' (setting JAVA_HOME to the clocation of its binary)
+
+if you want to check if youve set the enviroment variable you can use the command 'echo $' followed by the name of enviroment variable you are looking for 
+
+(full command: echo $JAVA_HOME ---> /usr/bin/java)
+
+If you want to set enviroment variables permanently, this is when the .zshrc and .bashrc file come in 
+
+.zshrc and .bashrc are configuration files that are located in the HOME directory, they contain all the configuration for your specific shell
+
+when setting enviroment variables permanently, you need to add the 'export' command to either the .bashrc file or .zshrc file depending on the shell you are using. This will influence what enviroment variable you have and the location of it according to your shell .
+
+This also means that everytime your system loads, it will run that certain 'export' command to set the enviroment variable which means that you dont have to manually set it all the time.
+
+understanding and managing enviroment variables allows you to customize your working enviroment and streamline your work flow 
+
+
+TO VIEW CURRENT ENVIROMENT VARIABLES ON THE SYSTEM USE THE: 'printenv' command
+
+The 'env' command does the same thing at the 'printenv' command, use either or.
+
+To Access The Value Of A specific Enviroment Variable Use: 'echo $"Name of Enviroment variable"
+
+' echo $HOME' -----> THE DOLLAR SYMBOL IS USED TO DE-REFERENCE THE VARIABLE AND ALLOWS US TO ACCESS ITS VALUE 
+
+Example command: 'export MY_VAR="Hello World"
+                 echo $MY_VAR
+                 Hello Word'
+
+with this command we have created a variable and its value so when we type 'echo $MY_VAR' the value: 'Hello World' will show up.
+
+Note: if you want to go to the last line of a file when in the 'vim' editor press 'o' and it will take you straight there
+
+REMEMBER! To Apply Any Changes You've Made to the '.zshrc' file you need to run the command ' source zsh.rc ' (or if you are using bash run ( source .bashrc )
+
+
+if you want to create a new directory to the set of directories in your enviroment variable, you can run the command: 'export PATH=$PATH:/home/ubuntu'
+
+This means you are updating the 'PATH' variable with what it already contains + the new directory which is '/home/ubuntu'
+
+So if you run 'echo $PATH' it wil show the new directory added '/home/ubuntu
+
+This means that you can create a script in the '/home/ubuntu' directory and the 'PATH' variable will recognise it as a directory eith executable commands 
+
+when you have created another directory in the 'PATH' enviroment variable, the linux file system recognises it as a directory with executable command so it will allow you to run the commands without specifying the directory within the enviroment variable
+
+
+
+
+Aliases!!
+
+-Aliases are shortcuts that allow you to create custom commands
+-they are useful for symplifiying long commands or commands that you use frequently
+- setting alias simplifies the use of these commands
+- to view current alias you run the 'alias' command, this shows a list of aliases
+
+  - to set an alias for a command you use frequently run the command
+         alias "name of alias you want to set"= 'name of command ou want to assign your alias to"
+
+    For example i have made a few aliases that i will be using for commands i use on a regular bases:
+
+    Aliases i have made:
+
+    v- = vim
+    tch- = touch
+    ct-  = cat
+    chd- = chmod
+    eco- = echo
+
+    how can you create these aliases using a command:
+
+    'alias v-="vim"'
+    'alias tch-="touch"'
+    'alias ct-="cat"'
+    'alias chd-="chmod"'
+    'alias eco-="echo"'
+
+    This is to make temporary alias's in the terminal session, remember to make alias's permanent you need to enter your '.zshrc' file and congigure the settings in the actual file by copying the alias command text you previously did but in the file using vim text editor!!
+
+    THIS IS A VISUAL EXAMPLE:
+
+    This is a temporary example- 'alias v-='vim'
+
+    This is a permanent example- ' vim .zshrc'
+    
+                                   ~
+                                   ~
+                                   ~ alias v-='vim
+                                   ~
+                                   ~
+                                   ~
+                                   .zshrc --INSERT--
+
+    
+
+
 
 
 
