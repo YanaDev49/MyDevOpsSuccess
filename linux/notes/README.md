@@ -603,6 +603,14 @@ Aliases!!
     
 
 
+Linux CLI shortcuts!!
+
+- You can use the 'history' command to view a list of previously executed commands  
+
+- The history command lists all of the commands youve run in that session with the numbers on the left hand side of the, for example '333 ls'
+- to re-execute a command from the session you need to type the name of the 
+
+
 
 
 
