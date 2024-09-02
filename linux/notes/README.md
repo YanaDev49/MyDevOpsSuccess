@@ -607,9 +607,12 @@ Linux CLI shortcuts!!
 
 - You can use the 'history' command to view a list of previously executed commands  
 
-- The history command lists all of the commands youve run in that session with the numbers on the left hand side of the, for example '333 ls'
-- to re-execute a command from the session you need to type the name of the 
-
+- The history command lists all of the commands youve run in that session with the numbers on the left hand side of the commands , for example '333 ls'
+- to re-execute a command from the session you need to type the number of the command followed by a an exlamation mark
+-  E.g 333! (This will run the ls command for an example) 
+if you press Ctrl + r you can do a reverse search, continue pressing 'r' and it should show all the options with the first letter you entered for the command. then you press 'enter' to execute the command
+you can type Ctrl + j to cancel running the command or you can type Ctrl + g to leave the command at the line prompt without running thr command 
+  
 
 
 
