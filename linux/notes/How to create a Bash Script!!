@@ -1,23 +1,33 @@
-🚀🚀🚀𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝗻𝗼𝘁𝗲𝘀 𝘄𝗶𝘁𝗵 𝗺𝗼𝗱𝘂𝗹𝗲 𝟮!! 𝗕𝗔𝗦𝗛 𝗦𝗖𝗥𝗜𝗣𝗧𝗜𝗡𝗚 🚀🚀🚀
+In order to create a Bash Script, You need to Open a file using the 'touch' command
 
-𝘚𝘰 𝘞𝘩𝘢𝘵 𝘪𝘴 𝘉𝘢𝘴𝘩 𝘚𝘤𝘳𝘪𝘱𝘵𝘪𝘯𝘨?
+E.g touch examplescript.sh (Make sure you add '.sh' at the end of Bash Scripting files to allow the terminal
+to Recognise that this file will be executed)
 
-𝖠 𝖡𝖺𝗌𝗁 𝖲𝖼𝗋𝗂𝗉𝗍 𝗂𝗌 𝖺 𝖿𝗂𝗅𝖾 𝗍𝗁𝖺𝗍 𝖼𝗈𝗇𝗍𝖺𝗂𝗇𝗌 𝗅𝗂𝗇𝗎𝗑 𝖼𝗈𝗆𝗆𝖺𝗇𝖽𝗌 𝗒𝗈𝗎 𝗐𝖺𝗇𝗍 𝗒𝗈𝗎𝗋 𝖼𝗈𝗆𝗉𝗎𝗍𝖾𝗋 𝗍𝗈 𝗋𝗎𝗇 𝖺𝗎𝗍𝗈𝗆𝖺𝗍𝗂𝖼𝖺𝗅𝗅𝗒.
-𝖡𝖺𝗌𝗁 𝗌𝖼𝗋𝗂𝗉𝗍𝗂𝗇𝗀 𝗍𝖺𝗄𝖾𝗌 𝗆𝖺𝗇𝗎𝖺𝗅 𝗍𝖺𝗌𝗄𝗌, 𝗌𝗎𝖼𝗁 𝖺𝗌 𝗎𝗉𝖽𝖺𝗍𝗂𝗇𝗀 𝗍𝗁𝖾 𝗌𝗒𝗌𝗍𝖾𝗆 𝗈𝗇 𝗒𝗈𝗎𝗋 𝖼𝗈𝗆𝗉𝗎𝗍𝖾𝗋 𝖺𝗇𝖽 𝖺𝗎𝗍𝗈𝗆𝖺𝗍𝖾𝗌 𝗍𝗁𝖾𝗆 
-𝗐𝗁𝗂𝖼𝗁 𝗌𝖺𝗏𝖾𝗌 𝗍𝗂𝗆𝖾 𝗈𝗇 𝗁𝖺𝗏𝗂𝗇𝗀 𝗍𝗈 𝖼𝖺𝗋𝗋𝗒 𝗈𝗎𝗍 𝗆𝖺𝗇𝗎𝖺𝗅 𝗍𝖺𝗌𝗄𝗌 𝗋𝖾𝗉𝖾𝗍𝗂𝗍𝗂𝗏𝖾𝗅𝗒.
+You can edit your bash scripting file using any text editor command for example 'vim' or 'nano'
 
-why else is Bash scripting useful?
+                      E.g 'vim examplescript.sh'
 
-- 𝖺𝗅𝗅𝗈𝗐𝗌 𝗒𝗈𝗎 𝗍𝗈 𝗆𝖺𝗇𝖺𝗀𝖾 𝗌𝗒𝗌𝗍𝖾𝗆 𝖼𝗈𝗇𝖿𝗂𝗀𝗎𝗋𝖺𝗍𝗂𝗈𝗇𝗌 𝖺𝗇𝖽 𝗌𝗈𝖿𝗍𝗐𝖺𝗋𝖾 𝗂𝗇𝗌𝗍𝖺𝗅𝗅𝗌 
-- 𝖡𝗈𝗈𝗌𝗍𝗌 𝖾𝖿𝖿𝗂𝖼𝗂𝖾𝗇𝗍𝖼𝗒 𝖻𝗒 𝗀𝖾𝗍𝗍𝗂𝗇𝗀 𝗆𝗈𝗋𝖾 𝖽𝗈𝗇𝖾 𝗂𝗇 𝗅𝖾𝗌𝗌 𝗍𝗂𝗆𝖾 𝗐𝗂𝗍𝗁 𝖺𝗎𝗍𝗈𝗆𝖺𝗍𝗂𝗈𝗇
+How to edit your Bash Script using the 'vim' command?
 
-𝘸𝘩𝘢𝘵 𝘪𝘴 𝘣𝘢𝘴𝘩?
+start by pressing 'i' in the 'vim' command to enter '---INSERT---' 
 
-𝖻𝖺𝗌𝗁 𝗂𝗌 𝖺 𝖼𝗈𝗆𝗆𝖺𝗇𝖽-𝗅𝗂𝗇𝖾 𝗍𝗈𝗈𝗅 𝗐𝖾 𝗎𝗌𝖾 𝗍𝗈 𝗂𝗇𝗍𝖾𝗋𝖺𝖼𝗍 𝗐𝗂𝗍𝗁 𝗈𝗎𝗋 𝖼𝗈𝗆𝗉𝗎𝗍𝖾𝗋 𝗐𝗁𝗂𝖼𝗁 𝖺𝗅𝗅𝗈𝗐𝗌 𝗎𝗌 𝗍𝗈 𝖾𝖿𝖿𝖾𝖼𝗍𝗂𝗏𝖾𝗅𝗒 𝗋𝗎𝗇 𝗌𝖼𝗋𝗂𝗉𝗍𝗌.
+Note: The first line of every Bash Script should begin with with a Shebang line, which looks like this '#!/bin/bash'
 
-𝕃𝕖𝕥'𝕤 𝔾𝕖𝕥 𝕊𝕥𝕒𝕣𝕥𝕖𝕕 𝕎𝕚𝕥𝕙 𝔹𝕒𝕤𝕙 𝕊𝕔𝕣𝕚𝕡𝕥𝕚𝕟𝕘!! 📝
-2 minutes ago
+So what is a Shebang line?
 
-Update Module 2: BASH!!
+The shebang line tells your computer to run the Script using bash!
+It specifies which interpreter we will use when running the script 
 
-------------------------> IMFORMATION ON THE NEXT FILE, STAY TUNED!! 😁
+How to add text to your Bash Scripting!!
+
+After you have established the #shebang line, you can start adding text to your file by 
+using the 'echo' command followed by the text you want to add.
+
+                       E.g 'echo "Hello everyone"'
+
+Remember to exit ---INSERT--- using the 'Esc' button on your keyboard, and once you 
+enter command mode, type 'wq!' to save your changes 
+
+Note: Due to the fact that your bash scripting file is an executable file, you need 
+to grant it permissions using the 'chmod' command
+
