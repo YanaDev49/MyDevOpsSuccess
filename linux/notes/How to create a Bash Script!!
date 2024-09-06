@@ -29,5 +29,269 @@ Remember to exit ---INSERT--- using the 'Esc' button on your keyboard, and once 
 enter command mode, type 'wq!' to save your changes 
 
 Note: Due to the fact that your bash scripting file is an executable file, you need 
-to grant it permissions using the 'chmod' command
+to grant it permissions using the 'chmod' command!
+
+          E.g 'chmod +x examplebashscriptfile.sh'
+
+After youve granted the file permissions, you can execute the file using './'
+
+                      E.g ./examplebashscript.sh
+
+(the script should show up on the terminal)
+
+Note: Did you know that you can actually run your bash script without using './'
+
+Thats Right!! 
+
+there are 2 other ways in which you can run your bash script, using the 'sh' command
+and the 'bash' command
+
+              E.g ' sh examplebashscript.sh '
+                             or
+                ' bash examplebashscript.sh ' (These commands are for when you dont specify
+  the interpreter in the bash scripts... This isfor when you dont use the shebang line)
+
+Note: the shebang line is not just limited to the bash shell, you can use different interpreters
+according to your needs and by specifying the correct interpreter in the shebang you can ensure that
+your scripts are executed consistently regardless of which shell or enviroment you are running.
+
+QUICK SUMMARY!!
+
+- The shebang Line starts with the #!, it specifies the interpreter or shell that should handle the script
+- it enables consistent executable scripts accross different enviroments, regardless of what shell you are using
+- you can specify different interpreters for different scripts
+- the shebang line should be the very first line of your bash script
+
+COMMENTS IN BASH SCRIPTING!!
+
+- Comments enhance clarity and understandibility of a script
+- comments are lines in a script that are not executed as part of the code 
+- comments explain what the code is doing and provides an explanation for the steps in the code
+- Adding comments to your script is considered best practices because it helps you and others understand
+whats going on in the code which provides clarity and logic of the script
+
+
+To add comments to your bash script you have to add '#' followed by the the comment that 
+you want to put 
+
+        E.g '#We are renaming this file'
+
+There are also multi-line comments in bash scripting that are made using ": and '"
+you begin your multi-line comment with ":'" to the amount of lines you want to extend the comment to and close 
+it with "'"
+
+            E.g " : 'The cp command in this script will copy this text in the next 
+                   file' "
+
+When you run a script, comments will not show, however when you run the cat command,
+it will show you the contents within the file without running the file as a script
+and will display the comments that youve added into the file. This is because, reviewing the contents within 
+a file is not the same as running the script itself.
+
+This is why comments do not show when you run the script
+
+- comments are useful for individuals who are new to bash scripting as they explain 
+what the code does in the file which provides logic and clarity as mentioned 
+
+Interesting ways to use comments in bash scripting!!
+
+if you want to prevent a script from running in bash scripting, you can turn the lines in a 
+script into a comment if you want to prevent it from running by adding '#'
+
+If you try run the bash script, the lines that you have turned into comments will not run
+
+
+How to run your script in anywhere without specifying its path!!
+
+Note: you need to place your script in one of the directories in your PATH ENVIROMENT VARIABLE
+
+(Remember, this is the enviroment variable that contains all the programs to run the commands you input)
+
+- you need to add your script to the /usr/local/bin using the command:
+
+         ' sudo mv examplebashscriptfile.sh /usr/local/bin/examplebashscript.sh '
+
+After this, you need to grant your script permissions to run the script and from any path using the:
+
+'sudo chmod +x /usr/local/bin/examplebashscript.sh' (we need to grant this permissions to enable the files execution from any enviroment'
+
+Now you can navigate to any directory and still run the script... E.g if you navigate to your desktop directory 
+and you want to run your bashscript, you can simply type 'examplebashscript.sh' (Remember, you have to type the name of the file YOUR bashscript is saved as)
+and press enter and it should run the script.
+
+
+Variables in Bashcripting!!
+
+Variables are an essential component of bashscripting as they allow you to store and manipulate data 
+and makes your script flexible
+
+- variables are created using the assignmnet operator '='
+
+                  E.g greeting="Hello world!'
+
+- To access the value of a variable, you have to put a '$' in front of the name of 
+the variable.
+
+                    E.g echo $greeting
+
+This means that if you run the echo command following the '$' and the variable 
+it will run the value of the variable 
+
+
+
+                 E.g greeting="Hello world!"
+
+                   echo $greeting 
+
+                      Will Run
+
+                  echo "Hello world!"
+
+
+- Variables can hold different types of data for E.g: strings, numbers and arrays
+
+                         EXAMPLES!!
+
+Strings: (Text)  greeting= "Hello Everyone!"
+
+Numbers: (integers) count= 43
+
+Arrays: (()) fruits= ("apples", "bananas", "pears")
+
+
+
+Parameters in bash scripting!!
+
+- Parameters allow you to customize the behaviour of your script and make it more flexible!!
+- parameters are input values from the command line when they are executed 
+
+-Parameters allow you to input a variable that will show up on your bashscript
+
+           E.g echo "Parameter 1: $1"
+               echo "Parameter 2: $2"
+               echo "Parameter 3: $3"
+
+This means that you can customise the variables '$1 $2 $3' youve entered after 
+the parameters on the terminal and make the output of the script whatever variables
+you would like.
+
+  For example, when you want to run the script you simply:
+
+             ' ./examplebashcript Hello world
+
+                 Parameter 1: Hello
+                 Parameter 2: world
+                 Parameter 3:                 '
+
+As you can see, we have controlled the variables that we have entered into our script
+using parameters!!
+
+
+what if we wanted to access all the parameters into a script?
+
+open your '.sh' for example 'examplebashscript.sh' 
+
+and add in the command ' echo "All Parameters: $@"
+
+This means that when you run the script, for example: 
+
+        ./example bashcript hello everyone world
+
+        Parameter 1: hello
+        Parameter 2: everyone
+        Parameter 3: world
+        All Parameters: hello everyone world
+          
+(This will be the output)
+
+
+Arithmetic Expansion In Bash Scripting!!
+
+- Bah Provides a straight forward way to perform mathmatical calculations and evaluate
+expressions using '$(())' = dollar and paranthesis notation 
+
+with '$(())' we can perform arithmetic calculations within our bashScript 
+
+An example bash script using dollar and paranthesis notation:
+
+' #!/bin/bash
+
+num1=6
+num2=4
+
+result=$((num1 + num2)) --------> This is how we use the dolla and paranthesis notation
+
+
+echo "The sum of $num1 and $num2 is: $result '
+
+
+RESULT OF CODE: 
+
+
+' Run Code- ./calculation.sh (this is the file that i have made for my script)
+
+The sum of 6 and 4 is: 10 '
+
+
+
+A MORE TECHNICAL SCRIPT USING $(())
+
+'length=10
+ width=16
+
+area=$((length * width ))
+perimeter=$((2 * (length + width)))
+
+echo "Rectangle area: $area"
+echo "Rectangle perimeter: $perimeter" '
+
+RESULT OF CODE:
+
+'  ./Area.sh
+Rectangle area: 160
+Rectangle perimeter: 52 '
+
+
+Arithmetic parameters
+
+
+
+The 'if statement' in bash scripting 
+
+- if statements allow you to include decision making logic into your script executing different code blocks
+based on specefic conditions 
+
+- They provide a way to control the flow of your bashscripts, they allow you to evaluate conditions
+and execute different code blocks, based on the result
+
+- They enable you to make decisions and create dynamic behaviour in your scripts
+
+- conditions in if statements are formed using comparison operators E.g:
+
+eq = equals
+ne = not equal to 
+lt = less than 
+gt = greater than
+le = less than or equal to 
+ge = greater than or equal to 
+
+- if statements become even more powerful with logical operators
+
+LOGICAL OPERATORS LOOK LIKE THIS:
+
+&& = AND 
+|| = OR
+
+This means that if you want to create more complex conditions using the AND or OR logical
+operators you can in your bashscript 
+
+
+
+
+
+
+
+
+
+
 
