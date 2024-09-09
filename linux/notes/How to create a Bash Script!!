@@ -277,6 +277,9 @@ ge = greater than or equal to
 
 - if statements become even more powerful with logical operators
 
+
+
+
 LOGICAL OPERATORS LOOK LIKE THIS:
 
 && = AND 
@@ -286,12 +289,145 @@ This means that if you want to create more complex conditions using the AND or O
 operators you can in your bashscript 
 
 
+String comparisons in bashscripting!
+
+== - equal to 
+!= - not equal to 
+
+
+The 'else' and 'elif' statement
+
+- The else clause provides a code block alternative to be executed when the 'if' condition turns out to be false.
+- 'elif' allows us to add another 'if' statement or condition is the first condition is false
+
+Example:
+
+price=35
+
+if [ $price -gt 25 ]; then
+    echo "your budget is just right!" 
+elif [ $price -gt 25 ] && [ $price -lt 75 ]; then 
+    echo "your budget is just right:)"
+else 
+    echo "Sorry, your budget is invalid"
+fi
+
+
+what are nested 'if' statements?
+
+-nested if statements allow us to create more complex decision making structures by imbedding 'if statemensts' into other 'if statements'
+
+example: age=34
+grade=65
+
+if [ $age -ge 25 ]; then 
+    echo "you are elegible for this programme based on your age"
+    if [ $grade -ge 90 ]; then
+	    echo "your grade is elegible for this programme!"
+
+   else 
+        echo "Sorry you are not elegible for this programme!"
+
+    fi 
+else
+        echo "Sorry, your grade is not elegible for this programme"
+
+fi '
+
+
+While loops in bash scripting!!
+
+- while loops allow you to repeatedly execute a block of code as long as a condition
+is true 
+- the condition is evaluated before each iteration 
+-the loop continues until the condition becomes false 
+- its important to note that while loops are useful for automating tasks and iterating other data 
+
+Example: 'count=1
+
+if [ $count -eq 1 ]; then
+    while [ $count -le 20 ]; do 
+        echo "Count: $count"
+        ((count++))
+    done
+else
+    echo "Sorry, cannot execute"
+fi'
 
 
 
+For Loops in bash scripting!!
+
+for loops allow you to repeat a block of code for a specified number of iterations or over a sequence of values 
+they are a powerful tool for automating operations and helping you to perform repetitive tasks and processing data
 
 
 
+Break and Continue statements in bash scripting!!
+
+- break and continue statements allow additional control within for and while loops
+- this allows you to interupt or skip while loops based on specific conditions
+- they give you the flexibility to interrupt a loop or skip iterations if necessary.
+
+- The continue statement allows you to skip the rest of the current iteration and move on to the next iteration of the loop
+
+Summary
+- The break statement exits the inner most loop it is placed in  
+- The continue statement skips the most current iteration for the loop and moves on to the next iteration  
+- both break and continue statements can be used with for and while loops to fine tune the behaviour of loops 
 
 
 
+Basics of functions in bash scripting!!
+
+- functions allow us to turn our code into modules 
+- improves script organisation 
+- enhances re-usability
+- functions are like mini programs within our bash script 
+- they encapsulate a set of instructions which are called and executed whenever needed
+
+
+Parameters in bash scripting!
+- There are 2 types of parameters, positional parameters and  special parameters
+- parameters allow us to pass data to functions making them more versatile and adaptable
+- function parameters provide a way to pass data to functions enabling them to perform specific tasks based on provided inputs 
+- positional parameters allow us to pass data to functions and access them using numbered variables like '$1' and '$2'
+- special parameters provide additional information about the scripts and the arguements passed to it
+
+such as: '$#' = which tells you the number of arguements 
+         '$0' =  tells you the name of the script
+         '$1' = tells you the first arguement you inputed 
+         '$2' = tells you the second arguement you inputed 
+         '$@' = tells you all arguments 
+
+User inputs in bash scripting!!
+
+- user input allows our scripts to interact with the users and make them more dynamic and make them more responsive 
+- by using user inputs, we can create powerful and interactive scripts 
+- using the 'read' command, the script can allow the user  to input anything they want, example 'read_name'
+- The read command is useful for interactive prompts, allowing users to enter information in the script  
+- command line arguements provide a direct way to pass direct user input when calling user functions
+
+Handling bad data in bash scripting!!
+
+- bad data refers to invalid or unexpected user inputs which may cause errors or undesired behaviours in our scripts
+- by implementing proper error handling techniques we can ensure that our scripts gracefully handle data 
+and provide informative feedback for the user
+- conditional statements can be used to handle 
+
+Piping in bash scripting 
+
+- piping allows us to pass an output of one command as input to another using the '|' symbol 
+- this allows us to connect commands and pass the output of one command as input to another 
+- piping within functions enables to perform advanced data operations and store the results in variables
+- we can combine piping with other commands or functions to create more complex data manipulation pipelines 
+
+Introduction to error handling!!
+
+- error handling in scrips is about forseeing where things can go wrong and taking the appropriate measures to handle those situation  
+- effective error handling can make your scripts more reliable and trust worthy and is considered best practice
+
+
+if statement Recap for error handling ib bash scripting!
+
+- 
