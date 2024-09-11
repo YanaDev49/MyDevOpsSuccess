@@ -428,6 +428,71 @@ Introduction to error handling!!
 - effective error handling can make your scripts more reliable and trust worthy and is considered best practice
 
 
-if statement Recap for error handling ib bash scripting!
+if statement Recap for error handling i bash scripting!
 
-- 
+-
+
+Exit Codes For bashscripting!
+
+- whenever a command or script ends, it returns an exit code to the system
+- this is a numerical value indicating if the script ran succsessfully or not 
+- an exit code of 0 = success and an exit code of any other number is not a succesess, indicates an error
+
+- when we run a command and it is successful, its exit code is 0 which means that it has passed through to the system, if a command fails its exit code will be another number which means its an error
+
+TO CHECK THE EXIT CODE OF THE PREVIOUS COMMAND RUN, RUN THE COMMAND:
+'echo $?'
+
+
+set -e in Bash Scripting!!
+
+# The 'set -e command' will tell the script to stop running if an error occurs 
+# using 'set -e' command can help us catch errors as soon as they happen
+# This avoids unexpected behaviour in the scripts 
+# its important to understand that not all exit codes that are not = to zero are errors
+# sometimes you may want to run your script even with an error and in this case you will not add 'set -e'
+
+set -u in Bash Scripting!!
+
+#The 'set -u' stops the script if it encounters an un initialised variable in the script
+#This means that if we have used a variable in the script that has not been created in the first place 
+#in this script we have told the system to execute the value of a variable that deosnt exist e.g 'variable X: $X'
+#the 'set -u' command stops the script if an unidentifiable variable has been executed
+
+#In this script we are using arithmetic expansion to solve an eqaution of numbered variables 
+#Although this is the case there is one uninitialised variable in the equation which means that it does not exists, we have not initialised the 'W' variable
+#the 'set -u' command will stop the script because the uninitialised variable will be noticed by the 'set -u' command and stop the script
+
+set -x and set +x in Bash Scripting!!
+
+# a powerful tool for debgugging in bash scripts is the 'set -x' command
+# the 'set -x' options prints each command that will be executed to the terminal before it is actually executed 
+# The 'set -x' option prints out all the values you have inputed into the script along with its commands to show you what it is doing
+# This shows you precisely each step in execution showing how the script is proceeding 
+#The 'set -u' option is very useful for troubleshooting scripts
+#if you only want to debug one part of your script you can put the option 'set +X' to allow the rest of your script to carry on as normal
+
+
+set -eux in Bash Scripting!!
+
+- Bash allows us to use the 'set -e, set -u, set -x' all in one go to maximize the debugging process
+- the 'set -eux' option will stop the script because of the error because of the 'e' flag, will stop the script because of an uninitialised variable due to the 'u' flag
+and will print each command before execution due to the 'x' flag
+
+More set commands in bash scripting!!
+
+- set -o nounset = set -u option (they are the same, they dont run a script if there is a variable that is uninitialised
+-The 'set -o errexit' option is also equivalent to the 'set -e' option because it
+#stops the rest of the code from running when there is an error in the code 
+-The 'set -o pipefail' option will prevent the grep command from running because
+# the file issued is nonexistent
+
+Reading Enviroment variables 
+
+- Reading enviroment variables allows you to restore and retrieve important information within our bash script
+- understanding how to work with enviroment variables can greatly enhance scripting capabilities 
+- Enviroment variables are like containers with valuable information for our scripts 
+- they provide a way to store settings and configurations that our scripts can access when needed  
+
+
+
